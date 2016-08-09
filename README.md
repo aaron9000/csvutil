@@ -45,7 +45,7 @@ npm install -g csvutil
 ##Recipes
 
 #####See visual diff of two files
-```csvutil -a sample_a.csv -b sample_b.csv -o diff```
+```csvutil -a sample_a.csv -b sample_b.csv```
 
 #####Preview the first 30 rows
 ```csvutil -a sample_a.csv -r 30```
@@ -54,10 +54,10 @@ npm install -g csvutil
 ```csvutil -a sample_a.csv -r 0```
 
 #####Render a markdown snippet
-```csvutil -a sample_a.csv -f md```
+```csvutil -a sample_a.csv -o md```
 
-#####Output csv diff to a file
-```csvutil -a sample_a.csv -b sample_b.csv -f csv > file.csv```
+#####Save diff to a file
+```csvutil -a sample_a.csv -b sample_b.csv -o csv > file.csv```
 
 ##Run Tests
 ```

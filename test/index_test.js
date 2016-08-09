@@ -29,8 +29,8 @@ describe("index", () => {
                 handleConfig({
                     pathA: 'test/data/sample_a.csv',
                     pathB: 'test/data/sample_b.csv',
-                    rows: -1,
-                    format: 'none',
+                    rows: 0,
+                    output: 'none',
                     width: 16
                 })
                     .then(v => {
@@ -44,8 +44,8 @@ describe("index", () => {
                 handleConfig({
                     pathA: 'foo.csv',
                     pathB: 'bar.csv',
-                    rows: -1,
-                    format: 'none',
+                    rows: 0,
+                    output: 'none',
                     width: 16
 
                 })
@@ -60,8 +60,8 @@ describe("index", () => {
                 handleConfig({
                     pathA: 'test/data/sample_a.csv',
                     pathB: 'test/data/reordered_columns.csv',
-                    rows: -1,
-                    format: 'none',
+                    rows: 0,
+                    output: 'none',
                     width: 16
                 })
                     .then(x => done('fail'))
@@ -76,8 +76,8 @@ describe("index", () => {
                 handleConfig({
                     pathA: 'test/data/sample_a.csv',
                     pathB: 'test/data/wrong_columns.csv',
-                    rows: -1,
-                    format: 'none',
+                    rows: 0,
+                    output: 'none',
                     width: 16
                 })
                     .then(x => done('fail'))
@@ -92,8 +92,8 @@ describe("index", () => {
                 handleConfig({
                     pathA: 'test/data/not_a_csv.csv',
                     pathB: 'test/data/sample_b.csv',
-                    rows: -1,
-                    format: 'none',
+                    rows: 0,
+                    output: 'none',
                     width: 16
                 })
                     .then(x => done('fail'))
@@ -108,8 +108,8 @@ describe("index", () => {
                 handleConfig({
                     pathA: 'test/data/sample_a_corrupt.csv',
                     pathB: 'test/data/sample_b.csv',
-                    rows: -1,
-                    format: 'none',
+                    rows: 0,
+                    output: 'none',
                     width: 16
                 })
                     .then(x => done('fail'))
@@ -124,8 +124,8 @@ describe("index", () => {
                 handleConfig({
                     pathA: 'test/data/long.csv',
                     pathB: 'test/data/sample_b.csv',
-                    rows: -1,
-                    format: 'none',
+                    rows: 0,
+                    output: 'none',
                     width: 16
                 })
                     .then(v => {
@@ -142,7 +142,7 @@ describe("index", () => {
                     pathA: 'test/data/sample_a.csv',
                     pathB: 'test/data/sample_b.csv',
                     rows: 2,
-                    format: 'none',
+                    output: 'none',
                     width: 16
                 })
                     .then(v => {
@@ -160,7 +160,7 @@ describe("index", () => {
                     pathA: 'test/data/sample_a.csv',
                     pathB: 'test/data/sample_b.csv',
                     rows: 2,
-                    format: 'csv',
+                    output: 'csv',
                     width: 16
                 })
                     .then(v => {
@@ -174,7 +174,7 @@ describe("index", () => {
                     pathA: 'test/data/sample_a.csv',
                     pathB: 'test/data/sample_a.csv',
                     rows: 2,
-                    format: 'csv',
+                    output: 'csv',
                     width: 16
                 })
                     .then(v => {
@@ -188,7 +188,7 @@ describe("index", () => {
                     pathA: 'test/data/sample_a.csv',
                     pathB: 'test/data/sample_b.csv',
                     rows: 2,
-                    format: 'pretty',
+                    output: 'pretty',
                     width: 14
                 })
                     .then(v => {
@@ -203,7 +203,7 @@ describe("index", () => {
                     pathA: 'test/data/sample_a.csv',
                     pathB: 'test/data/sample_a.csv',
                     rows: 2,
-                    format: 'pretty',
+                    output: 'pretty',
                     width: 12
                 })
                     .then(v => {
@@ -218,7 +218,7 @@ describe("index", () => {
                     pathA: 'test/data/sample_a.csv',
                     pathB: 'test/data/sample_b.csv',
                     rows: 2,
-                    format: 'md',
+                    output: 'md',
                     width: 14
                 })
                     .then(v => {
@@ -233,7 +233,7 @@ describe("index", () => {
                     pathA: 'test/data/sample_a.csv',
                     pathB: 'test/data/sample_a.csv',
                     rows: 2,
-                    format: 'md',
+                    output: 'md',
                     width: 12
                 })
                     .then(v => {
@@ -265,8 +265,8 @@ describe("index", () => {
                 handleConfig({
                     pathA: 'test/data/sample_a.csv',
                     pathB: null,
-                    rows: -1,
-                    format: 'none',
+                    rows: 0,
+                    output: 'none',
                     width: 16
                 })
                     .then(v => {
@@ -280,8 +280,8 @@ describe("index", () => {
                 handleConfig({
                     pathA: 'foo.csv',
                     pathB: null,
-                    rows: -1,
-                    format: 'none',
+                    rows: 0,
+                    output: 'none',
                     width: 16
 
                 })
@@ -297,8 +297,8 @@ describe("index", () => {
                 handleConfig({
                     pathA: 'test/data/sample_a_corrupt.csv',
                     pathB: null,
-                    rows: -1,
-                    format: 'none',
+                    rows: 0,
+                    output: 'none',
                     width: 16
                 })
                     .then(x => done('fail'))
@@ -314,7 +314,7 @@ describe("index", () => {
                     pathA: 'test/data/sample_a.csv',
                     pathB: null,
                     rows: 2,
-                    format: 'none',
+                    output: 'none',
                     width: 16
                 })
                     .then(v => {
@@ -333,7 +333,7 @@ describe("index", () => {
                     pathA: 'test/data/sample_a.csv',
                     pathB: null,
                     rows: 2,
-                    format: 'csv',
+                    output: 'csv',
                     width: 16
                 })
                     .then(v => {
@@ -347,7 +347,7 @@ describe("index", () => {
                     pathA: 'test/data/sample_a.csv',
                     pathB: null,
                     rows: 2,
-                    format: 'pretty',
+                    output: 'pretty',
                     width: 14
                 })
                     .then(v => {
@@ -361,7 +361,7 @@ describe("index", () => {
                     pathA: 'test/data/sample_a.csv',
                     pathB: null,
                     rows: 2,
-                    format: 'md',
+                    output: 'md',
                     width: 12
                 })
                     .then(v => {
