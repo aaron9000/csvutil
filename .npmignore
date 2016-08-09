@@ -1,0 +1,7 @@
+node_modules
+test
+.babelrc
+.gitignore
+README.md
+package.sh
+webpack.*
