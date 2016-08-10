@@ -1,6 +1,4 @@
 #csvutil
-
-##Features
 - Diff, convert, and preview csv files
 - Supports `csv`, `markdown`, and `terminal-friendly` output
 - Works with large files
