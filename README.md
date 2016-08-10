@@ -4,6 +4,11 @@
 - Works with large files
 - Small memory footprint (uses read streams)
 
+##Terminal-friendly Output
+![screenshot](https://github.com/aaron9000/csvutil/blob/master/assets/screenshot.png)
+--
+
+
 ##Installation
 ```
 npm install -g csvutil
@@ -36,10 +41,6 @@ npm install -g csvutil
               3 |                |                |              2
               5 |                |                |              2
 
-
-##Colors & Terminal-friendly Output
-![screenshot](https://github.com/aaron9000/csvutil/blob/master/assets/screenshot.png)
---
 
 ##Recipes
 
