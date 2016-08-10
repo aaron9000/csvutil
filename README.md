@@ -41,6 +41,7 @@ npm install -g csvutil
 
 ##Colors & Terminal-friendly Output
 ![screenshot](https://github.com/aaron9000/csvutil/blob/master/assets/screenshot.png)
+--
 
 ##Recipes
 
