@@ -1,8 +1,8 @@
 {
   "name": "csvutil",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "csvutil",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "mocha --timeout 1000 test/.setup.js test/**/*_test.js --compilers js:babel-register",
     "app": "node index.js"
