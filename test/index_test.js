@@ -1,7 +1,7 @@
 import {expect, assert} from 'chai';
 import R from 'ramda';
 
-import {handleConfig} from '../lib/index';
+import {handleConfig} from '../lib/app';
 
 function fail(err) {
     expect(false).to.be.ok;

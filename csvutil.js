@@ -1,4 +1,6 @@
+#!/usr/bin/env node
 require('babel-register')({
-    presets: ["es2015", "stage-0", "react"]
+    presets: ["es2015", "stage-0", "react"],
+    ignore: /node_modules/
 });
-require("./app.js");
+require("./lib/index.js");

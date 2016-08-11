@@ -1,6 +1,6 @@
 {
   "name": "csvutil",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "csvutil",
   "main": "lib/index.js",
   "scripts": {
