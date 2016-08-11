@@ -5,5 +5,4 @@ assets
 README.md
 lib
 package.sh
-es5
 webpack.*
