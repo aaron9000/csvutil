@@ -6,3 +6,4 @@ npm-debug.log
 *.js.map
 dist
 es5
+jobs.csv

@@ -1,7 +1,7 @@
 import {expect, assert} from 'chai';
 import R from 'ramda';
 
-import {handleConfig} from '../lib/app';
+import {handleConfig} from '../es5/app';
 
 function fail(err) {
     expect(false).to.be.ok;
@@ -247,7 +247,7 @@ describe("index", () => {
 
     describe("render", () => {
 
-        describe('functionality', () => {
+        describe.only('functionality', () => {
 
             it("return error for invalid config", (done) => {
                 handleConfig({
@@ -264,6 +264,21 @@ describe("index", () => {
             it("renders a valid file", (done) => {
                 handleConfig({
                     pathA: 'test/data/sample_a.csv',
+                    pathB: null,
+                    rows: 0,
+                    output: 'none',
+                    width: 16
+                })
+                    .then(v => {
+                        expect(v).to.be.ok;
+                        done();
+                    })
+                    .catch(x => done('fail'));
+            });
+
+            it("renders a large valid file", (done) => {
+                handleConfig({
+                    pathA: 'test/data/jobs.csv',
                     pathB: null,
                     rows: 0,
                     output: 'none',

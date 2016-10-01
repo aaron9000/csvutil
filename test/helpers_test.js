@@ -1,6 +1,6 @@
 import {expect, assert} from 'chai';
 import R from 'ramda';
-import {repeatString, truncate, padOrTruncate} from '../lib/string_helpers';
+import {repeatString, truncate, padOrTruncate} from '../es5/string_helpers';
 
 describe("string_helper", () => {
     it("repeats strings", () => {

@@ -1,6 +1,6 @@
 import {expect, assert} from 'chai';
 import R from 'ramda';
-import {parse, DefaultConfig} from '../lib/config';
+import {parse, DefaultConfig} from '../es5/config';
 
 describe("config", () => {
 

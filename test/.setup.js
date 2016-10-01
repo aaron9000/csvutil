@@ -1,1 +1,1 @@
-require('babel-register')();
+console.log("common setup");
