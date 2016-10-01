@@ -1,6 +1,6 @@
 import {expect, assert} from 'chai';
 import R from 'ramda';
-import {repeatString, truncate, padOrTruncate} from '../es5/string_helpers';
+import {repeatString, truncate, padOrTruncatePretty, padOrTruncateMarkdown} from '../es5/string_helpers';
 
 describe("string_helper", () => {
     it("repeats strings", () => {
@@ -15,8 +15,16 @@ describe("string_helper", () => {
         expect(truncate(4, 'abcdefg')).to.equal('a...');
     });
 
-    it("normalizes any string", () => {
-        expect(padOrTruncate(9, 'abcdefg')).to.equal('  abcdefg');
-        expect(padOrTruncate(3, 'abcdefg')).to.equal('...');
+    it("normalizes any string (pretty)", () => {
+        expect(padOrTruncatePretty(9, 'abcdefg')).to.equal('  abcdefg');
+        expect(padOrTruncatePretty(3, 'abcdefg')).to.equal('...');
+    });
+
+    it("normalizes any string (markdown)", () => {
+        expect(padOrTruncateMarkdown(9, 'abcdefg')).to.equal('`abcd...`');
+        expect(padOrTruncateMarkdown(3, 'abcdefg')).to.equal('`...`');
+        expect(padOrTruncateMarkdown(5, '')).to.equal('     ');
+        expect(padOrTruncateMarkdown(5, '  ')).to.equal('     ');
+        expect(padOrTruncateMarkdown(5, null)).to.equal('     ');
     });
 });
