@@ -247,7 +247,7 @@ describe("index", () => {
 
     describe("render", () => {
 
-        describe.only('functionality', () => {
+        describe('functionality', () => {
 
             it("return error for invalid config", (done) => {
                 handleConfig({
@@ -280,7 +280,7 @@ describe("index", () => {
                 handleConfig({
                     pathA: 'test/data/jobs.csv',
                     pathB: null,
-                    rows: 0,
+                    rows: 10,
                     output: 'none',
                     width: 16
                 })
