@@ -278,7 +278,7 @@ describe("index", () => {
 
             it("renders a large valid file", (done) => {
                 handleConfig({
-                    pathA: 'test/data/jobs.csv',
+                    pathA: 'test/data/huge.csv',
                     pathB: null,
                     rows: 10,
                     output: 'none',
