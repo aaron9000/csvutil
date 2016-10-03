@@ -38,10 +38,9 @@ npm install -g csvutil
 ----------------------------------------------------|----------------------------------------------------|----------------------------------------------------|----------------------------------------------------|----------------------------------------------------
  `                                        --path-a` | `                                              -a` | `                                       file path` | `                                 source csv path` | `                                            null`
  `                                        --path-b` | `                                              -b` | `                                       file path` | `                  comparison csv path (for diff)` | `                                            null`
+ `                                        --output` | `                                              -o` | `                                          string` | `                   output format (md|csv|pretty)` | `                                          pretty`
  `                                          --rows` | `                                              -r` | `                                         integer` | `            max rows to output (0 for unlimited)` | `                                              10`
- `                                        --output` | `                                              -o` | `                                         integer` | `                   output format (md|csv|pretty)` | `                                          pretty`
  `                                         --width` | `                                              -w` | `                                         integer` | `      max width for pretty & md columns (5 - 50)` | `                                              16`
-
 
 
 ##Diff Example
