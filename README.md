@@ -15,6 +15,35 @@ npm install -g csvutil
 ```
 
 
+##Recipes
+
+#####See visual diff of two files
+```csvutil -a sample_a.csv -b sample_b.csv```
+
+#####Preview the first 30 rows
+```csvutil -a sample_a.csv -r 30```
+
+#####Preview all rows
+```csvutil -a sample_a.csv -r 0```
+
+#####Render a markdown snippet
+```csvutil -a sample_a.csv -o md```
+
+#####Save diff to a file
+```csvutil -a sample_a.csv -b sample_b.csv -o csv > file.csv```
+
+
+##Argument Reference
+                                               long |                                              short |                                               type |                                        description |                                            default
+----------------------------------------------------|----------------------------------------------------|----------------------------------------------------|----------------------------------------------------|----------------------------------------------------
+ `                                        --path-a` | `                                              -a` | `                                       file path` | `                                 source csv path` | `                                            null`
+ `                                        --path-b` | `                                              -b` | `                                       file path` | `                  comparison csv path (for diff)` | `                                            null`
+ `                                          --rows` | `                                              -r` | `                                         integer` | `            max rows to output (0 for unlimited)` | `                                              10`
+ `                                        --output` | `                                              -o` | `                                         integer` | `                   output format (md|csv|pretty)` | `                                          pretty`
+ `                                         --width` | `                                              -w` | `                                         integer` | `      max width for pretty & md columns (5 - 50)` | `                                              16`
+
+
+
 ##Diff Example
 
 #####Sample A
@@ -42,22 +71,6 @@ npm install -g csvutil
               5 |                |                |              2
 
 
-##Recipes
-
-#####See visual diff of two files
-```csvutil -a sample_a.csv -b sample_b.csv```
-
-#####Preview the first 30 rows
-```csvutil -a sample_a.csv -r 30```
-
-#####Preview all rows
-```csvutil -a sample_a.csv -r 0```
-
-#####Render a markdown snippet
-```csvutil -a sample_a.csv -o md```
-
-#####Save diff to a file
-```csvutil -a sample_a.csv -b sample_b.csv -o csv > file.csv```
 
 ##Run Tests
 ```
