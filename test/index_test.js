@@ -37,7 +37,7 @@ describe("index", () => {
                         expect(v).to.be.ok;
                         done();
                     })
-                    .catch(x => done('fail'));
+                    .catch(done);
             });
 
             it("returns error for two nonexistent files", (done) => {
@@ -134,7 +134,7 @@ describe("index", () => {
                         expect(v.differentRows).to.equal(3);
                         done();
                     })
-                    .catch(x => done('fail'));
+                    .catch(done);
             });
 
             it("respects max lines", (done) => {
@@ -150,7 +150,7 @@ describe("index", () => {
                         expect(v.differentRows).to.equal(2);
                         done();
                     })
-                    .catch(x => done('fail'));
+                    .catch(done);
             });
         });
 
@@ -167,7 +167,7 @@ describe("index", () => {
                         expect(v).to.be.ok;
                         done();
                     })
-                    .catch(x => done('fail'));
+                    .catch(done);
             });
             it("renders a csv diff (0 differences)", (done) => {
                 handleConfig({
@@ -181,7 +181,7 @@ describe("index", () => {
                         expect(v).to.be.ok;
                         done();
                     })
-                    .catch(x => done('fail'));
+                    .catch(done);
             });
             it("renders a pretty diff (2 differences)", (done) => {
                 handleConfig({
@@ -195,7 +195,7 @@ describe("index", () => {
                         expect(v).to.be.ok;
                         done();
                     })
-                    .catch(x => done('fail'));
+                    .catch(done);
             });
 
             it("renders a pretty diff (0 differences)", (done) => {
@@ -210,7 +210,7 @@ describe("index", () => {
                         expect(v).to.be.ok;
                         done();
                     })
-                    .catch(x => done('fail'));
+                    .catch(done);
             });
 
             it("renders a md diff (2 differences)", (done) => {
@@ -225,7 +225,7 @@ describe("index", () => {
                         expect(v).to.be.ok;
                         done();
                     })
-                    .catch(x => done('fail'));
+                    .catch(done);
             });
 
             it("renders a md diff (0 differences)", (done) => {
@@ -240,7 +240,7 @@ describe("index", () => {
                         expect(v).to.be.ok;
                         done();
                     })
-                    .catch(x => done('fail'));
+                    .catch(done);
             });
         });
     });
@@ -273,7 +273,7 @@ describe("index", () => {
                         expect(v).to.be.ok;
                         done();
                     })
-                    .catch(x => done('fail'));
+                    .catch(done);
             });
 
             it("renders a large valid file", (done) => {
@@ -288,7 +288,7 @@ describe("index", () => {
                         expect(v).to.be.ok;
                         done();
                     })
-                    .catch(x => done('fail'));
+                    .catch(done);
             });
 
             it("returns error for nonexistent file", (done) => {
@@ -337,7 +337,7 @@ describe("index", () => {
                         expect(v.rendered_rows).to.equal(2);
                         done();
                     })
-                    .catch(x => done('fail'));
+                    .catch(done);
             });
         });
 
@@ -355,7 +355,7 @@ describe("index", () => {
                         expect(v).to.be.ok;
                         done();
                     })
-                    .catch(x => done('fail'));
+                    .catch(done);
             });
             it("renders pretty output", (done) => {
                 handleConfig({
@@ -369,7 +369,7 @@ describe("index", () => {
                         expect(v).to.be.ok;
                         done();
                     })
-                    .catch(x => done('fail'));
+                    .catch(done);
             });
             it("renders markdown output", (done) => {
                 handleConfig({
@@ -383,7 +383,7 @@ describe("index", () => {
                         expect(v).to.be.ok;
                         done();
                     })
-                    .catch(x => done('fail'));
+                    .catch(done);
             });
 
         });
