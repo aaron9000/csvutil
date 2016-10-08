@@ -3,10 +3,6 @@ import R from 'ramda';
 
 import {handleConfig} from '../es5/app';
 
-function fail(err) {
-    expect(false).to.be.ok;
-}
-
 describe("index", () => {
 
     describe("diff", () => {
