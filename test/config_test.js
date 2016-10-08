@@ -11,7 +11,8 @@ describe("config", () => {
             pathB: 'bar',
             rows: 100,
             output: 'csv',
-            width: 50
+            width: 50,
+            buildStringBuffer: false
         });
     });
 
@@ -22,7 +23,8 @@ describe("config", () => {
             pathB: 'bar1',
             rows: 101,
             output: 'pretty',
-            width: 50
+            width: 50,
+            buildStringBuffer: false
         });
     });
 
@@ -33,7 +35,8 @@ describe("config", () => {
             pathB: 'b1',
             rows: 10,
             output: 'pretty',
-            width: 16
+            width: 16,
+            buildStringBuffer: false
         });
     });
 

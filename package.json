@@ -1,6 +1,6 @@
 {
   "name": "csvutil",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "description": "csvutil",
   "main": "es5/index.js",
   "scripts": {
@@ -33,6 +33,7 @@
     "colors": "^1.1.2",
     "commander": "^2.9.0",
     "csv": "^1.1.0",
+    "eol": "^0.3.0",
     "pad": "^1.0.0",
     "ramda": "^0.20.1",
     "rx": "^4.1.0",
