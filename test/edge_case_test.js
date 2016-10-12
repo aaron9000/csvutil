@@ -21,6 +21,9 @@ describe("edge cases", () => {
     const newlines_md = textFromFile('./data/newlines_md.txt');
     const newlines_csv = textFromFile('./data/newlines_csv.txt');
     const newlines_pretty = textFromFile('./data/newlines_pretty.txt');
+    const newlines_csv_diff = textFromFile('./data/newlines_csv_diff.txt');
+    const newlines_md_diff = textFromFile('./data/newlines_md_diff.txt');
+    const newlines_pretty_diff = textFromFile('./data/newlines_pretty_diff.txt');
 
     describe("messy files with quotes", () => {
 
@@ -72,7 +75,7 @@ describe("edge cases", () => {
         it("diffs messy file with escaped string (csv)", (done) => {
             handleConfig({
                 pathA: 'test/data/messy.csv',
-                pathB: 'test/data/messy_header.csv',
+                pathB: 'test/data/messy_different.csv',
                 rows: 0,
                 output: 'csv',
                 width: 16,
@@ -134,6 +137,53 @@ describe("edge cases", () => {
                 .catch(done);
         });
 
+        it("diffs files with newlines (csv)", (done) => {
+            handleConfig({
+                pathA: 'test/data/newlines.csv',
+                pathB: 'test/data/newlines_different.csv',
+                rows: 0,
+                output: 'csv',
+                width: 16,
+                buildStringBuffer: true
+            })
+                .then(v => {
+                    expect(eol.auto(v.stringBuffer)).to.be.equal(newlines_csv_diff);
+                    done();
+                })
+                .catch(done);
+        });
+
+        it("diffs files with newlines (pretty)", (done) => {
+            handleConfig({
+                pathA: 'test/data/newlines.csv',
+                pathB: 'test/data/newlines_different.csv',
+                rows: 0,
+                output: 'pretty',
+                width: 16,
+                buildStringBuffer: true
+            })
+                .then(v => {
+                    expect(eol.auto(v.stringBuffer)).to.be.equal(newlines_pretty_diff);
+                    done();
+                })
+                .catch(done);
+        });
+
+        it("diffs files with newlines (md)", (done) => {
+            handleConfig({
+                pathA: 'test/data/newlines.csv',
+                pathB: 'test/data/newlines_different.csv',
+                rows: 0,
+                output: 'md',
+                width: 16,
+                buildStringBuffer: true
+            })
+                .then(v => {
+                    expect(eol.auto(v.stringBuffer)).to.be.equal(newlines_md_diff);
+                    done();
+                })
+                .catch(done);
+        });
     });
 
 });
